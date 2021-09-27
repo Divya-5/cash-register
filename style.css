@@ -5,17 +5,23 @@ body{
 }
 :root {
     --primary-color: #111827;
-    --off-white: #f3f4f6;
-    --dark-gray: #6b7280;
     --white-color: #ffffff;
     --grey-color: #9ca3af;
+    --background-blue:rgb(188, 239, 253);
+    --background-greyish:#1E3A8A;
+    --box-shadow-black:#353535;
+    --secondary-red:red;
 }
+
 .fluid-section{
-    width: 70vw;
-    margin: auto;
+padding: 20px;
 }
 
 @media screen and (min-width:767px){
+    .fluid-section{
+        width: 40vw;
+        margin: auto;
+    }
     .container{
         display: flex;
         flex-direction: column;
@@ -25,10 +31,18 @@ h1{
     color: var(--dark-gray);
     text-align: center;
 }
+#outer-box{
+    background-color: var(--background-blue);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 5px var(--box-shadow-black);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 .sub-heading{
     font-size: larger;
-    margin: 1rem;
+    margin: auto;
     text-align: center;
+    width: 500px;
 }
 label{
       font-size: larger;
@@ -39,6 +53,7 @@ label{
 input[type=text]{
     padding: 10px;
     border: 1px solid var(--primary-color);
+    width: 100%;
 }
 .input-btns{
     margin: auto;
@@ -57,6 +72,24 @@ button{
     font-weight: bold;
     margin-top: 20px;
 }
+#check-button{
+    width: 100%;
+    background-color: var(--background-greyish);
+    border: none;
+    color: var(--white-color);
+}
+#error-message{
+    text-align: center;
+    color: var(--secondary-red);
+    font-weight: bold;
+    font-size: small;
+}
+caption{
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
 th, td {
     border: 2px solid var(--primary-color);
     width: 0%;
@@ -72,14 +105,13 @@ th, td {
     background-color: var(--grey-color);
     padding: 2rem 1rem;
     text-align: center;
-
-    color: black;
+    color: var(--primary-color);
     border-top-right-radius: 1rem;
-    margin-top: 20px;
+    margin-top: 50px;
   }
   
   .footer .link {
-    color: black;
+    color: var(--primary-color);
     font-size: 16px;
     padding: 0;
   }
@@ -100,4 +132,13 @@ th, td {
     display: inline;
     padding: 0rem 0.5rem;
   }
+  @media screen and (min-width:767px){
+    .footer ul {
+        justify-content: flex-end;
+    }
+  }
+
   
+  #return-table, .amount-given{
+      display: none;
+  }

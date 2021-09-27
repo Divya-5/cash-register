@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div class="container fluid-section">
+    <div class="container fluid-section" id="outer-box"> 
         <h1 class="heading">
-            Cash Register Manager
+            Cash Register Manager  💰
         </h1>
         <div class="sub-heading">
             Enter the bill amount and cash given by the customer and know minimum number of notes to return.
@@ -20,14 +20,18 @@
         <div class="container input-btns fluid-section">
             <label class="input-label" for="bill-amount">Bill Amount:</label><br>
             <input class="input" id="bill-amount" type="text" /><br>
-            <!-- <button id="">Next</button> -->
-            <label class="input-label" for="cash-given">Cash Given:</label><br>
-            <input class="input" id="cash-given" type="text" /> <br>
-            <button id="check-button">
-                Check
-            </button>
+            <button id="next-btn">Next</button>
+            <div class="amount-given">
+                <label class="input-label" for="cash-given">Cash Given:</label><br>
+                <input class="input" id="cash-given" type="text" /> <br>
+                <button id="check-button">
+                    Check
+                </button>
+            </div>
+          
         </div>
-        <div class="container fluid-section">
+        <p id="error-message"></p>
+        <div class="container" id="return-table">
         <p id="error-message"></p>
         <table class="table-change">
             <caption>Return Change</caption>
